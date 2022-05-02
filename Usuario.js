@@ -15,6 +15,9 @@ const Usuario = db.define('users',{
     email: {
         type: Sequelize.STRING,
         allowNull: false,
+        notEmpty: true,
+        unique: true,
+        isEmail: true, 
     },
 
     job:{
@@ -22,6 +25,7 @@ const Usuario = db.define('users',{
 
         type: Sequelize.STRING,
         allowNull: false,
+        notEmpty: true,
 
     },
 
@@ -29,6 +33,7 @@ const Usuario = db.define('users',{
 
         type: Sequelize.INTEGER,
         allowNull: false,
+        notEmpty: true,
     }
 });
 
