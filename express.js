@@ -1,15 +1,23 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const port = 3000;
 
+
+// Rotas para API e testes com Insomnia
 app.get('/', (req, res) => {
   res.send('<h1>Hello World com React JS!</h1>')
-})
+});
 
 app.get('/contatos', (req, res) => {
 
-  res.send('<h1>Visualizar contatos</h1>');
-})
+  // res.send('<h1>Visualizar contatos com React JS</h1>');
+  res.json({
+      'nome': 'Nathan Barbosa Soares',
+      'email': 'nathan2020@gmail.com',
+      'job': 'Analista de Sistemas',
+      'idade': 4
+  });
+});
 
 app.get('/contatos/:id', (req, res) => {
     const id = req.params.id;
