@@ -20,7 +20,7 @@ app.get('/contatos/:id', (req, res) => {
       'email': 'renatoguara2020@gmail.com',
       'job': 'Analista de Sistemas',
       'idade': 50,
-      'hobbies': 'Estudar programação com React'
+      'hobbies': 'Estudar programação com React, leitura de livros de Technology'
 
   });
 });
