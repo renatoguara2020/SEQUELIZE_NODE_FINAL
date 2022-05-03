@@ -6,6 +6,11 @@ app.get('/', (req, res) => {
   res.send('<h1>Hello World com React JS!</h1>')
 })
 
+app.get('/contatos', (req, res) => {
+
+  res.send('<h1>Visualizar contatos</h1>');
+})
+
 app.get('/contatos/:id', (req, res) => {
     const id = req.params.id;
 
