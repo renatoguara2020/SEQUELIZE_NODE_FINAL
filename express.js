@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3001;
 
-app.use(express.json());
+
+app.use(express.json())
 // Rotas para API e testes com Insomnia
 app.get('/', (req, res) => {
   res.send('<h1>Hello World com React JS!</h1>')
@@ -33,14 +34,13 @@ app.get('/contatos/:id', (req, res) => {
   });
 });
 
-app.post('/contatos', (req, res)=>{
-
+app.post("/contato", (req, res) => {
+  var nome = req.body.nome;
+  var { email } = req.body;
+  //Implementar a regra para salvar no banco de dados
   return res.json({
-   'nome': 'Creuza Alves Gonçalves',
-   'email': 'gcreuza.alves@gmail.com',
-   'job': 'Aposentada do GDF e do INSS',
-   'idade': 76,
-
+      nome,
+      email
   });
 });
 
